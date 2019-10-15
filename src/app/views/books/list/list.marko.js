@@ -2,7 +2,7 @@
 "use strict";
 
 var marko_template = module.exports = require("marko/src/html").t(__filename),
-    marko_componentType = "/book-list$1.0.0/src/app/viewss/books/list/list.marko",
+    marko_componentType = "/book-list$1.0.0/src/app/views/books/list/list.marko",
     components_helpers = require("marko/src/components/helpers"),
     marko_renderer = components_helpers.r,
     marko_defineComponent = components_helpers.c,
@@ -25,13 +25,13 @@ function render(input, out, __component, component, state) {
 
   var for__9 = 0;
 
-  marko_forEach(data.books, function(book) {
+  marko_forEach(data.livros, function(livro) {
     var keyscope__10 = "[" + ((for__9++) + "]");
 
     out.w("<tr><td>" +
-      marko_escapeXml(book.id) +
+      marko_escapeXml(livro.id) +
       "</td><td>" +
-      marko_escapeXml(book.title) +
+      marko_escapeXml(livro.titulo) +
       "</td></tr>");
   });
 
@@ -52,7 +52,7 @@ marko_template._ = marko_renderer(render, {
 marko_template.Component = marko_defineComponent({}, marko_template._);
 
 marko_template.meta = {
-    id: "/book-list$1.0.0/src/app/viewss/books/list/list.marko",
+    id: "/book-list$1.0.0/src/app/views/books/list/list.marko",
     tags: [
       "marko/src/components/taglib/component-globals-tag",
       "marko/src/components/taglib/init-components-tag",
